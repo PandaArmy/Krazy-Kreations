@@ -5,13 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Krazy Kreationz - Home</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Slideshow background styles */
+    .slideshow-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .slideshow-bg img {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    .slideshow-bg img.active {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
-  <!-- Background slideshow -->
   <div class="slideshow-bg">
     <img src="images/Home.jpeg" class="active" alt="Slide 1">
     <img src="images/Home2.jpeg" alt="Slide 2">
     <img src="images/slide3.jpg" alt="Slide 3">
+    <!-- Add more images as needed -->
   </div>
 
   <header>
@@ -37,6 +58,7 @@
     <section class="featured-products">
       <h3>Featured Products</h3>
       <div class="products">
+        <!-- Example product cards -->
         <div class="product-card">
           <img src="images/product1.jpg" alt="Krazy Kandy Kebabs">
           <h4>Krazy Kandy Kebabs</h4>
@@ -58,7 +80,7 @@
   </footer>
 
   <script>
-    // Slideshow logic
+    // Simple slideshow background script
     const slides = document.querySelectorAll('.slideshow-bg img');
     let current = 0;
     setInterval(() => {
