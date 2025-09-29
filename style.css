@@ -215,8 +215,8 @@ footer {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  object-fit: contain;   /* show the whole image */
-  background-color: black; /* fill empty space */
+  object-fit: cover;      /* fill the area, show whole image, crop if needed */
+  background-color: black;
   opacity: 0;
   transition: opacity 1s;
 }
