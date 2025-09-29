@@ -211,6 +211,16 @@ footer {
     margin-top: 40px;
 }
 
+.slideshow-bg img {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;   /* show the whole image */
+  background-color: black; /* fill empty space */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
 /* Responsive Design */
 @media (max-width: 700px) {
     .products {
