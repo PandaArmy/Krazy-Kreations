@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krazy Kreationz - Home</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Slideshow background styles */
-        .slideshow-bg {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100vw; height: 100vh;
-            z-index: -1;
-            overflow: hidden;
-        }
-        .slideshow-bg img {
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 1s;
-        }
-        .slideshow-bg img.active {
-            opacity: 1;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krazy Kreationz - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Slideshow background styles */
+    .slideshow-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .slideshow-bg img {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    .slideshow-bg img.active {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
-    <div class="slideshow-bg">
-        <img src=""E:\Krazy Kreations website\images\Home.jpeg"" class="active" alt="Slide 1">
-        <img src=""E:\Krazy Kreations website\images\Home2.jpeg"" alt="Slide 2">
-        <img src="images/slide3.jpg" alt="Slide 3">
-        <!-- Add more images as needed -->
-    </div>
-    <header>
-        <h1>Krazy Kreationz</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h2>Welcome to Krazy Kreationz!</h2>
-            <p>Your Ideas, Our Kreationz.</p>
-            <a href="shop.html" class="btn">Shop Now</a>
-        </section>
-        <section class="featured-products">
-            <h3>Featured Products</h3>
-            <div class="products">
-                <!-- Example product cards -->
-                <div class="product-card">
-                    <img src="images/product1.jpg" alt="Krazy Kandy Kebabs">
-                    <h4>Krazy Kandy Kebabs</h4>
-                    <p>$15.00</p>
-                    <a href="product.html" class="btn">View</a>
-                </div>
-                <div class="product-card">
-                    <img src="images/product2.jpg" alt="Krazy Jello Shots">
-                    <h4>Krazy Jello Shots</h4>
-                    <p>$5.00</p>
-                    <a href="product.html" class="btn">View</a>
-                </div>
-                <!-- Add more products as needed -->
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Krazy Kreationz. All rights reserved.</p>
-    </footer>
-    <script>
-        // Simple slideshow background script
-        const slides = document.querySelectorAll('.slideshow-bg img');
-        let current = 0;
-        setInterval(() => {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }, 3500);
-    </script>
-    <script src="script.js"></script>
+  <div class="slideshow-bg">
+    <img src="images/Home.jpeg" class="active" alt="Slide 1">
+    <img src="images/Home2.jpeg" alt="Slide 2">
+    <img src="images/slide3.jpg" alt="Slide 3">
+    <!-- Add more images as needed -->
+  </div>
+
+  <header>
+    <h1>Krazy Kreationz</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Welcome to Krazy Kreationz!</h2>
+      <p>Your Ideas, Our Kreationz.</p>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </section>
+
+    <section class="featured-products">
+      <h3>Featured Products</h3>
+      <div class="products">
+        <!-- Example product cards -->
+        <div class="product-card">
+          <img src="images/product1.jpg" alt="Krazy Kandy Kebabs">
+          <h4>Krazy Kandy Kebabs</h4>
+          <p>$15.00</p>
+          <a href="product.html" class="btn">View</a>
+        </div>
+        <div class="product-card">
+          <img src="images/product2.jpg" alt="Krazy Jello Shots">
+          <h4>Krazy Jello Shots</h4>
+          <p>$5.00</p>
+          <a href="product.html" class="btn">View</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Krazy Kreationz. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple slideshow background script
+    const slides = document.querySelectorAll('.slideshow-bg img');
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3500);
+  </script>
 </body>
 </html>
